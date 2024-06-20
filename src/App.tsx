@@ -1,31 +1,38 @@
-import { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import Router from '@/router';
 
 import reactLogo from './assets/react.svg';
 
-import './App.css';
 import viteLogo from '/vite.svg';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank' rel='noreferrer'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
+      <BrowserRouter>
+        <header>
+          <h1>Vite + React Template</h1>
+          <div className='links'>
+            <a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
+              <img src={viteLogo} className='logo' alt='Vite logo' />
+            </a>
+            <a href='https://react.dev' target='_blank' rel='noreferrer'>
+              <img src={reactLogo} className='logo react' alt='React logo' />
+            </a>
+            <a href='/home' rel='noreferrer'>
+              Home
+            </a>
+            <a href='/basic' rel='noreferrer'>
+              basic page
+            </a>
+          </div>
+        </header>
+
+        <main className='container-mobile'>
+          <Router />
+        </main>
+      </BrowserRouter>
     </>
   );
 }

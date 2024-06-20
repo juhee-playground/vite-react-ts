@@ -4,11 +4,7 @@ export default function CatViewer() {
   return (
     <>
       <section className={styles.menuContainer}>
-       Main
-      </section>
-      <div>1번 과제 - CatViewer</div>
-      <section className={styles.footer}>
-        footer
+        <h3>홈화면</h3>
       </section>
     </>
   );
